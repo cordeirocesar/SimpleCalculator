@@ -19,5 +19,31 @@ public class Main {
 
         double result;
 
+        switch (operation) {
+            case '+':
+                result = number1 + number2;
+                System.out.println("Result: " + result);
+                break;
+            case '-':
+                result = number1 - number2;
+                System.out.println("Result: " + result);
+                break;
+            case '*':
+                result = number1 * number2;
+                System.out.println("Result: " + result);
+                break;
+            case '/':
+                if (number2 != 0) {
+                    result = number1 / number2;
+                    System.out.println("Result: " + result);
+                } else {
+                    System.out.println("Error: Division by zero is not allowed.");
+                }
+                break;
+            default:
+                System.out.println("Error: Unknown operation");
+        }
+        scanner.close();
+
     }
 }
